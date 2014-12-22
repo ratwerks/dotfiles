@@ -6,9 +6,9 @@
 
 ########## Variables
 
-dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc vim"          # list of files/folders to symlink in homedir
+dir=~/dotfiles                # dotfiles directory
+olddir=~/dotfiles_old         # old dotfiles backup directory
+files="bashrc vimrc vim"      # list of files/folders to symlink in homedir
 
 ##########
 
@@ -29,3 +29,7 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+# fix up Vim Vundle
+mkdir -p ~/.vim/bundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
