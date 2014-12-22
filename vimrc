@@ -4,8 +4,7 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 set helplang=en
-set history=50
-set nomodeline
+set history=48
 set number
 set mouse=a
 set printoptions=paper:letter
@@ -15,7 +14,7 @@ set guioptions=aegimrLtb
 set nocompatible
 filetype off
 
-" set runtime path to include Vundle and itit
+" set runtime path to include Vundle then initialize
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -32,6 +31,7 @@ Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-sensible'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 't9md/vim-chef'
 
 filetype on "end Vundle section
 
