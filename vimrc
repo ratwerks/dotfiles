@@ -31,6 +31,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-sensible'
+Plugin 'elzr/vim-json'
 Plugin 'altercation/vim-colors-solarized'
 
 filetype on "end Vundle section
