@@ -1,0 +1,11 @@
+[user]
+	name = James B Robinson
+	email = jr@ratwerks.com
+[credential]
+	helper = cache --timeout=3600
+[alias]
+	co = checkout
+[core]
+	editor = gvim -f
+[push]
+	default = simple
