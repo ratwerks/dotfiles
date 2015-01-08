@@ -40,15 +40,6 @@ filetype on "end Vundle section
 au BufNewFile,BufReadPost {*.md,*.mkd,*.markdown}                  setl ft=markdown
 au BufNewFile,BufReadPost {*.scala}                                setl ft=scala
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}  setl ft=ruby
-au BufNewFile,BufReadPost {*.json}                                 setl ft=json
-augroup json_autocmd
-  au FileType json set autoindent
-  au FileType json set formatoptions=tcq21
-  au FileType json set textwidth=78 shiftwidth=2
-  au FileType json set softtabstop=2 tabstop=8
-  au FileType json set expandtab
-  au FileType json set foldmethod=syntax
-augroup END
 
 " color
 if has('gui_running')
