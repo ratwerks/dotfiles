@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=1024
+HISTFILESIZE=2048
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -75,32 +75,14 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
 
 # some more ls aliases
-alias ll='/bin/ls --color -Falvh'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+alias ll='/bin/ls --color -Falvh '
+alias lt='/bin/ls --color -Faltr '
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -112,3 +94,18 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+## JR exports
+export EDITOR=vim
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+## idibon goodness
+export IDIBON_OPS_KEY=jr@ratwerks.com
+export IDIBON_MYSQL_PASSWORD=camproberts
+#export RUBYLIB=~/github/ididat/lib
+alias bundle_install="jruby -S bundle install --path .bundle/gems"
+
+## RVM
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
